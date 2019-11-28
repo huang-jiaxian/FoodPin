@@ -11,13 +11,26 @@ import UIKit
 class RestaurantDetailViewController: UIViewController {
     
     @IBOutlet var restaurantImageView:UIImageView!
+    @IBOutlet var nameLabel:UILabel!
+    @IBOutlet var locationLabel:UILabel!
+    @IBOutlet var typeLabel:UILabel!
+    
     var restaurantImageName = ""
+    var restaurantName = ""
+    var restaurantType = ""
+    var restaurantLocation = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         restaurantImageView.image = UIImage(named: restaurantImageName)
+        nameLabel.text = restaurantName
+        locationLabel.text = restaurantType
+        typeLabel.text = restaurantLocation
+        
+        // 大标题不再出现
         navigationItem.largeTitleDisplayMode = .never
     }
     
