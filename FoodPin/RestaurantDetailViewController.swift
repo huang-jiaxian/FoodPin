@@ -27,8 +27,8 @@ class RestaurantDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         restaurantImageView.image = UIImage(named: restaurantImageName)
         nameLabel.text = restaurantName
-        locationLabel.text = restaurantType
-        typeLabel.text = restaurantLocation
+        locationLabel.text = restaurantLocation
+        typeLabel.text = restaurantType
         
         // 大标题不再出现
         navigationItem.largeTitleDisplayMode = .never
