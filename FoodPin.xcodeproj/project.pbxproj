@@ -43,6 +43,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0854333A23975F1200BD3506 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08F88713237BE3540076F72A /* RestaurantTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0854333B23975F4E00BD3506 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0800CFFC239101B200E9891C /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0854333C23975F6000BD3506 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				08F88711237BA2D00076F72A /* RestaurantTableViewController.swift */,
+				080DD885238E8B3A0052CD8D /* RestaurantDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0854333D23975F8900BD3506 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				08F88703237BA0540076F72A /* Main.storyboard */,
+				08F88708237BA0580076F72A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		08F886F1237BA0540076F72A = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +96,14 @@
 		08F886FC237BA0540076F72A /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				0854333A23975F1200BD3506 /* View */,
+				0854333B23975F4E00BD3506 /* Model */,
+				0854333D23975F8900BD3506 /* Storyboard */,
+				0854333C23975F6000BD3506 /* Controller */,
 				08F886FD237BA0540076F72A /* AppDelegate.swift */,
 				08F886FF237BA0540076F72A /* SceneDelegate.swift */,
-				08F88703237BA0540076F72A /* Main.storyboard */,
-				08F88713237BE3540076F72A /* RestaurantTableViewCell.swift */,
-				08F88711237BA2D00076F72A /* RestaurantTableViewController.swift */,
-				080DD885238E8B3A0052CD8D /* RestaurantDetailViewController.swift */,
 				08F88706237BA0580076F72A /* Assets.xcassets */,
-				08F88708237BA0580076F72A /* LaunchScreen.storyboard */,
 				08F8870B237BA0580076F72A /* Info.plist */,
-				0800CFFC239101B200E9891C /* Restaurant.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";

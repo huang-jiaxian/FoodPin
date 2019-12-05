@@ -11,9 +11,9 @@ import UIKit
 class RestaurantTableViewCell: UITableViewCell {
     
     // declare the variables,outlet : 输出
-    @IBOutlet var nameLabel:UILabel!
-    @IBOutlet var locationLabel:UILabel!
-    @IBOutlet var typeLabel:UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var typeLabel: UILabel!
     @IBOutlet var thumbnailImageView : UIImageView!
     @IBOutlet var heartImageView : UIImageView!
 
