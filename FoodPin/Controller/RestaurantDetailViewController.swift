@@ -22,7 +22,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black,renderingMode:  .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = restaurant.phone
             cell.selectionStyle = .none
             
@@ -30,7 +30,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-            cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black,renderingMode:  .alwaysOriginal)
+            cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black,renderingMode: .alwaysOriginal)
             cell.shortTextLabel.text = restaurant.location
             cell.selectionStyle = .none
             
@@ -83,6 +83,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
       
         // 大标题不再出现
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        tableView.contentInsetAdjustmentBehavior = .never
         
         // 来源于tableviewde的prepare
         headerView.headerImageView.image = UIImage(named: restaurant.name)
