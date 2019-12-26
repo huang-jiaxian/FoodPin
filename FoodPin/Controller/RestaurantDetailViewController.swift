@@ -85,9 +85,12 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.backgroundColor?.withAlphaComponent(0)
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.hidesBarsOnSwipe = false
         
         tableView.contentInsetAdjustmentBehavior = .never
+        
         
         // 来源于tableviewde的prepare
         headerView.headerImageView.image = UIImage(named: restaurant.name)
@@ -102,6 +105,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     /*
     // MARK: - Navigation

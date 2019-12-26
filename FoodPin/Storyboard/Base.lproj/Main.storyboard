@@ -97,7 +97,9 @@
                             <outlet property="delegate" destination="hJy-ac-zSK" id="oPb-Vd-KoP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="ly2-RE-Yfk"/>
+                    <navigationItem key="navigationItem" title="FoodPin" id="ly2-RE-Yfk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="BlB-GO-Alf"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvr-Dk-Gf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="78k-aS-Epk">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="FCi-0i-FrS" userLabel="Header View" customClass="RestaurantDetailHeader" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -246,10 +248,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="78k-aS-Epk" firstAttribute="bottom" secondItem="urT-bj-95k" secondAttribute="bottom" id="Auh-Td-tGM"/>
-                            <constraint firstItem="78k-aS-Epk" firstAttribute="trailing" secondItem="urT-bj-95k" secondAttribute="trailing" id="WDE-DL-gI6"/>
-                            <constraint firstItem="78k-aS-Epk" firstAttribute="leading" secondItem="urT-bj-95k" secondAttribute="leading" id="ZKm-yP-pXK"/>
-                            <constraint firstItem="78k-aS-Epk" firstAttribute="top" secondItem="urT-bj-95k" secondAttribute="top" id="u08-PA-rUP"/>
+                            <constraint firstItem="78k-aS-Epk" firstAttribute="leading" secondItem="GKK-yh-ldz" secondAttribute="leading" id="O5Y-wz-gVb"/>
+                            <constraint firstAttribute="trailing" secondItem="78k-aS-Epk" secondAttribute="trailing" id="dCJ-Ua-h78"/>
+                            <constraint firstAttribute="bottom" secondItem="78k-aS-Epk" secondAttribute="bottom" id="klP-mw-sfQ"/>
+                            <constraint firstItem="78k-aS-Epk" firstAttribute="top" secondItem="GKK-yh-ldz" secondAttribute="top" id="qvz-c0-Usu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="urT-bj-95k"/>
                     </view>
@@ -280,21 +282,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJw-KS-gWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="100"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="q9p-vc-wmd">
-            <objects>
-                <viewController id="m1s-e5-Iwk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ujP-an-Huj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="V2a-IL-htD"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ht-Ie-JUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3596" y="-595"/>
         </scene>
     </scenes>
     <resources>
