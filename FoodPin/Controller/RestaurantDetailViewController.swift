@@ -85,7 +85,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.backgroundColor?.withAlphaComponent(0)
+        navigationController?.navigationBar.backgroundColor? = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue:255.0/255.0, alpha: 0)
         navigationController?.navigationBar.tintColor = .white
         navigationController?.hidesBarsOnSwipe = false
         
@@ -101,14 +101,20 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Detai page will disappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("Detail page did disappear")
     }
 
     /*

@@ -123,6 +123,10 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="van-KX-xMA" userLabel="Header Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                         </imageView>
+                                        <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9q-X7-Y0e" userLabel="Dim View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-29-pq0" userLabel="Name Label">
                                             <rect key="frame" x="14" y="266.5" width="91.5" height="41.5"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
@@ -165,12 +169,16 @@
                                         <constraint firstItem="CTE-29-pq0" firstAttribute="leading" secondItem="8g5-i4-CCo" secondAttribute="leading" id="Hxx-f0-nnS"/>
                                         <constraint firstItem="ggB-Xz-Cxn" firstAttribute="centerY" secondItem="8g5-i4-CCo" secondAttribute="centerY" id="Ju1-6P-RGp"/>
                                         <constraint firstAttribute="bottom" secondItem="8g5-i4-CCo" secondAttribute="bottom" constant="14" id="MjZ-Tg-ahc"/>
+                                        <constraint firstAttribute="trailing" secondItem="D9q-X7-Y0e" secondAttribute="trailing" id="TAG-sW-sj2"/>
                                         <constraint firstItem="8g5-i4-CCo" firstAttribute="leading" secondItem="FCi-0i-FrS" secondAttribute="leading" constant="14" id="fGw-et-v4R"/>
                                         <constraint firstAttribute="bottom" secondItem="van-KX-xMA" secondAttribute="bottom" id="lE7-MT-S7g"/>
+                                        <constraint firstItem="D9q-X7-Y0e" firstAttribute="leading" secondItem="FCi-0i-FrS" secondAttribute="leading" id="nPo-TJ-Q92"/>
+                                        <constraint firstItem="D9q-X7-Y0e" firstAttribute="top" secondItem="FCi-0i-FrS" secondAttribute="top" id="pRN-Cf-VMF"/>
                                         <constraint firstItem="van-KX-xMA" firstAttribute="leading" secondItem="FCi-0i-FrS" secondAttribute="leading" id="qRV-VX-Tfl"/>
                                         <constraint firstItem="ggB-Xz-Cxn" firstAttribute="leading" secondItem="8g5-i4-CCo" secondAttribute="trailing" constant="16" id="rzc-Az-Pi9"/>
                                         <constraint firstItem="8g5-i4-CCo" firstAttribute="top" secondItem="CTE-29-pq0" secondAttribute="bottom" constant="8" id="uhr-fX-5lv"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CTE-29-pq0" secondAttribute="trailing" constant="50" id="x8s-iZ-V8X"/>
+                                        <constraint firstAttribute="bottom" secondItem="D9q-X7-Y0e" secondAttribute="bottom" id="xhQ-4B-81Y"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerImageView" destination="van-KX-xMA" id="amH-aY-Hzs"/>
