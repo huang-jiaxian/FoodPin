@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // statusBar  --- 待优化，iOS13已更新
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+//        杨浩给出的尝试
+//        UIApplication.shared.keyWindow.windowScene.statusBarManager
+        
         // Override point for customization after application launch.
         let backButtonImage = UIImage(systemName: "arrow.left", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))
         UINavigationBar.appearance().backIndicatorImage = backButtonImage

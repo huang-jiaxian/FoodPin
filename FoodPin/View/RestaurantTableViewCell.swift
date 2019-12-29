@@ -12,7 +12,12 @@ class RestaurantTableViewCell: UITableViewCell {
     
     // declare the variables,outlet : 输出
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel! {
+        didSet {
+            locationLabel.numberOfLines = 0
+        
+        }
+    }
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var thumbnailImageView : UIImageView!
     @IBOutlet var heartImageView : UIImageView!
