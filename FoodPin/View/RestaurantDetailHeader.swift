@@ -28,6 +28,7 @@ class RestaurantDetailHeader: UIView {
         didSet {
             typeLabel.layer.cornerRadius = 5.0
             typeLabel.layer.masksToBounds = true
+            typeLabel.numberOfLines = 0
         }
     }
     @IBOutlet var heartImageView: UIImageView! {

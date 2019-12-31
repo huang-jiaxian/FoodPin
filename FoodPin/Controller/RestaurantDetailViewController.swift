@@ -109,6 +109,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         print("Detai page will disappear")
     }
