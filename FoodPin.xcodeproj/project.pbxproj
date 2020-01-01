@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0800CFFD239101B200E9891C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0800CFFC239101B200E9891C /* Restaurant.swift */; };
 		080DD886238E8B3A0052CD8D /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080DD885238E8B3A0052CD8D /* RestaurantDetailViewController.swift */; };
+		0816C7DC23BD06B300F382C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0816C7DB23BD06B300F382C2 /* MapKit.framework */; };
 		085433DC2398F17F00BD3506 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085433D22398F17F00BD3506 /* Rubik-MediumItalic.ttf */; };
 		085433DD2398F17F00BD3506 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085433D32398F17F00BD3506 /* Rubik-Bold.ttf */; };
 		085433DE2398F17F00BD3506 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 085433D42398F17F00BD3506 /* Rubik-Light.ttf */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0800CFFC239101B200E9891C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		080DD885238E8B3A0052CD8D /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		0816C7DB23BD06B300F382C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		085433D22398F17F00BD3506 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		085433D32398F17F00BD3506 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		085433D42398F17F00BD3506 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -67,12 +69,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0816C7DC23BD06B300F382C2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0816C7DA23BD06B300F382C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0816C7DB23BD06B300F382C2 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0854333A23975F1200BD3506 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +168,7 @@
 			children = (
 				08F886FC237BA0540076F72A /* FoodPin */,
 				08F886FB237BA0540076F72A /* Products */,
+				0816C7DA23BD06B300F382C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
