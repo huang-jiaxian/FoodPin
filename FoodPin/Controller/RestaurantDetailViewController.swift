@@ -114,11 +114,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("Detai page will disappear")
+//        print("Detail page will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        print("Detail page did disappear")
+//        print("Detail page did disappear")
     }
 
     /*

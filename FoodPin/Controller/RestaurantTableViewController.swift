@@ -68,7 +68,7 @@ class RestaurantTableViewController: UITableViewController {
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.hidesBarsOnSwipe = true
         
-        print("Restaurant list will appear")
+//        print("Restaurant list will appear")
     }
 
     // MARK: - Table view data source
