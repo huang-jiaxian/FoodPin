@@ -13,7 +13,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,6 +40,21 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
             cell.descriptionLabel.text = restaurant.description
             cell.selectionStyle = .none
+            
+            return cell
+            
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeparantorCell.self), for: indexPath) as! RestaurantDetailSeparantorCell
+            cell.titleLable.text = "HOW TO GET HERE"
+            cell.selectionStyle = .none
+            
+            return cell
+            
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+            cell.selectionStyle = .none
+            
+            cell.configure(location: restaurant.location)
             
             return cell
             
@@ -83,11 +98,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
       
         // 大标题不再出现
         navigationItem.largeTitleDisplayMode = .never
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.backgroundColor? = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue:255.0/255.0, alpha: 0)
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.hidesBarsOnSwipe = false
+        
         
         tableView.contentInsetAdjustmentBehavior = .never
         
@@ -105,20 +116,31 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.backgroundColor? = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue:255.0/255.0, alpha: 0)
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.tintColor = .white
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            destinationController.restaurant = restaurant
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-//        print("Detail page will disappear")
+        print("Detail page will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-//        print("Detail page did disappear")
+        print("Detail page did disappear")
     }
 
     /*

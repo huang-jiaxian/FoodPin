@@ -9,6 +9,8 @@
 import UIKit
 
 class RestaurantDetailSeparantorCell: UITableViewCell {
+    
+    @IBOutlet var titleLable: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

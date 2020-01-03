@@ -23,6 +23,9 @@
 		085433E923995C9500BD3506 /* RestaurantDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085433E823995C9500BD3506 /* RestaurantDetailHeader.swift */; };
 		0860592523B8DEBB009657C3 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0860592423B8DEBB009657C3 /* UIColor+Ext.swift */; };
 		0860592723B8E58E009657C3 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0860592623B8E58E009657C3 /* UINavigationController+Ext.swift */; };
+		088EA6B723BDD4C60056874B /* RestaurantDetailSeparantorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EA6B623BDD4C60056874B /* RestaurantDetailSeparantorCell.swift */; };
+		088EA6B923BDD7840056874B /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EA6B823BDD7840056874B /* RestaurantDetailMapCell.swift */; };
+		088EA6BB23BF18AD0056874B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EA6BA23BF18AD0056874B /* MapViewController.swift */; };
 		089DB34823ABC3A5004350C3 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089DB34723ABC3A5004350C3 /* RestaurantDetailIconTextCell.swift */; };
 		089DB34A23ABC6BA004350C3 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089DB34923ABC6BA004350C3 /* RestaurantDetailTextCell.swift */; };
 		08F886FE237BA0540076F72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F886FD237BA0540076F72A /* AppDelegate.swift */; };
@@ -51,6 +54,9 @@
 		085433E823995C9500BD3506 /* RestaurantDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeader.swift; sourceTree = "<group>"; };
 		0860592423B8DEBB009657C3 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		0860592623B8E58E009657C3 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		088EA6B623BDD4C60056874B /* RestaurantDetailSeparantorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeparantorCell.swift; sourceTree = "<group>"; };
+		088EA6B823BDD7840056874B /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
+		088EA6BA23BF18AD0056874B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		089DB34723ABC3A5004350C3 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantDetailIconTextCell.swift; path = FoodPin/View/RestaurantDetailIconTextCell.swift; sourceTree = SOURCE_ROOT; };
 		089DB34923ABC6BA004350C3 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantDetailTextCell.swift; path = FoodPin/View/RestaurantDetailTextCell.swift; sourceTree = SOURCE_ROOT; };
 		08F886FA237BA0540076F72A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +97,8 @@
 				085433E823995C9500BD3506 /* RestaurantDetailHeader.swift */,
 				089DB34723ABC3A5004350C3 /* RestaurantDetailIconTextCell.swift */,
 				089DB34923ABC6BA004350C3 /* RestaurantDetailTextCell.swift */,
+				088EA6B623BDD4C60056874B /* RestaurantDetailSeparantorCell.swift */,
+				088EA6B823BDD7840056874B /* RestaurantDetailMapCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 			children = (
 				08F88711237BA2D00076F72A /* RestaurantTableViewController.swift */,
 				080DD885238E8B3A0052CD8D /* RestaurantDetailViewController.swift */,
+				088EA6BA23BF18AD0056874B /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,15 +289,18 @@
 			files = (
 				0860592723B8E58E009657C3 /* UINavigationController+Ext.swift in Sources */,
 				08F88714237BE3540076F72A /* RestaurantTableViewCell.swift in Sources */,
+				088EA6B723BDD4C60056874B /* RestaurantDetailSeparantorCell.swift in Sources */,
 				089DB34A23ABC6BA004350C3 /* RestaurantDetailTextCell.swift in Sources */,
 				08F886FE237BA0540076F72A /* AppDelegate.swift in Sources */,
 				0800CFFD239101B200E9891C /* Restaurant.swift in Sources */,
 				089DB34823ABC3A5004350C3 /* RestaurantDetailIconTextCell.swift in Sources */,
 				080DD886238E8B3A0052CD8D /* RestaurantDetailViewController.swift in Sources */,
+				088EA6B923BDD7840056874B /* RestaurantDetailMapCell.swift in Sources */,
 				08F88700237BA0540076F72A /* SceneDelegate.swift in Sources */,
 				0860592523B8DEBB009657C3 /* UIColor+Ext.swift in Sources */,
 				08F88712237BA2D00076F72A /* RestaurantTableViewController.swift in Sources */,
 				085433E923995C9500BD3506 /* RestaurantDetailHeader.swift in Sources */,
+				088EA6BB23BF18AD0056874B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
