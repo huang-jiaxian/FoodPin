@@ -29,7 +29,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zUX-Yz-2gD">
-                                            <rect key="frame" x="22" y="11" width="315" height="60.5"/>
+                                            <rect key="frame" x="22" y="11" width="293" height="60.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="31M-G9-KF7">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -39,7 +39,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RTl-ZP-rRg">
-                                                    <rect key="frame" x="90" y="0.0" width="225" height="58.5"/>
+                                                    <rect key="frame" x="90" y="0.0" width="203" height="58.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKE-Jg-PuJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
@@ -64,7 +64,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="zgn-QO-CnA">
-                                            <rect key="frame" x="337" y="11" width="22" height="21"/>
+                                            <rect key="frame" x="315" y="11" width="44" height="42"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -104,7 +104,7 @@
             <objects>
                 <viewController id="fas-4c-Ohl" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GKK-yh-ldz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="78k-aS-Epk">
@@ -122,13 +122,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-29-pq0" userLabel="Name Label">
-                                            <rect key="frame" x="14" y="266" width="91.5" height="41.5"/>
+                                            <rect key="frame" x="14" y="266.5" width="86" height="41"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-Xz-Cxn">
-                                            <rect key="frame" x="150" y="315.5" width="22" height="21"/>
+                                            <rect key="frame" x="150" y="305" width="44" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="Jd1-BF-mDg"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="xD8-dD-VMf"/>
@@ -321,7 +321,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="urT-bj-95k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jSn-kE-rag"/>
+                    <navigationItem key="navigationItem" id="jSn-kE-rag">
+                        <barButtonItem key="backBarButtonItem" title=" " id="L0n-Rk-4yG"/>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="headerView" destination="FCi-0i-FrS" id="emP-gB-rNY"/>
@@ -353,7 +355,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dro-F3-mNH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Kpb-0X-lcY"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Kpb-0X-lcY"/>
                     <connections>
                         <outlet property="mapView" destination="jd8-Gm-YuV" id="cJ2-UZ-zIE"/>
                     </connections>
@@ -368,7 +370,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rTt-N4-bHI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HWP-7K-4w7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

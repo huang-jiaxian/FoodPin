@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     
@@ -17,7 +17,11 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mapView.delegate = self
+        mapView.showsScale = true
+        mapView.showsCompass = true
+        mapView.showsTraffic = true
+        
         // Do any additional setup after loading the view.
         // convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
@@ -39,11 +43,33 @@ class MapViewController: UIViewController {
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
                     
-                    self.mapView.showAnnotations([annotation], animated: true)
+                    self.mapView.showAnnotations([annotation], animated: false)
                     self.mapView.selectAnnotation(annotation, animated: true)
+                    
                 }
             }
         })
+    }
+    
+//    every time when the map view needs to display an annotation ,the method below will be called
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "MyMarker"
+        
+//        verify if the annotation object is a kind of MKUserLocation
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
+        }
+        
+        var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        }
+        
+        annotationView?.glyphText = "😜"
+        annotationView?.markerTintColor = UIColor.orange
+        
+        return annotationView
     }
     
     override func viewWillAppear(_ animated: Bool) {
