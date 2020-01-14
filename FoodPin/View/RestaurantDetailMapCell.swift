@@ -13,6 +13,7 @@ class RestaurantDetailMapCell: UITableViewCell {
     
     @IBOutlet var mapView: MKMapView!
     
+    // set an annotation
     func configure(location: String) {
         let geoCoder = CLGeocoder()
         
@@ -40,11 +41,10 @@ class RestaurantDetailMapCell: UITableViewCell {
                     let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
                     self.mapView.setRegion(region, animated: false)
                 }
-                
             }
         })
-        
     }
+    // end set an annotation
 
     override func awakeFromNib() {
         super.awakeFromNib()
