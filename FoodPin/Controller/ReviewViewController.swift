@@ -46,28 +46,21 @@ class ReviewViewController: UIViewController {
 //            }
 //        })
         // fade-in animation
-        var delay = 0.1
+//        var delay = 0.1
         for rateButton in rateButtons {
-            UIView.animate(withDuration: 1, delay: delay, options: [], animations
-                : {
+//            UIView.animate(withDuration: 1, delay: delay, options: [.repeat, .autoreverse], animations
+//                : {
+//                rateButton.alpha = 1.0
+//                rateButton.transform = .identity
+//                delay += 0.05;
+//            }, completion: nil)
+//            print(delay)
+            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {
                 rateButton.alpha = 1.0
-                    rateButton.transform = .identity
-                delay += 0.05;
-            }, completion: nil)
-            print(delay)
+                rateButton.transform = .identity
+            })
         }
 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
