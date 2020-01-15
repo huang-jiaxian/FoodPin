@@ -11,6 +11,7 @@ import UIKit
 class ReviewViewController: UIViewController {
     
     @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var closeButton: UIButton!
     @IBOutlet var rateButtons: [UIButton]!
     
     var restaurant = Restaurant()
@@ -28,12 +29,17 @@ class ReviewViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
         
         let moveRightTransform = CGAffineTransform.init(translationX: 600, y: 0)
+        let scaleUpTransform = CGAffineTransform.init(scaleX: 2.0, y: 2.0)
+        let moveScaleTransform = scaleUpTransform.concatenating(moveRightTransform)
         
         // make the buttons invisible and move to right
         for rateButton in rateButtons {
             rateButton.alpha = 0
-            rateButton.transform = moveRightTransform
+            rateButton.transform = moveScaleTransform
         }
+        
+        let moveTopTransform = CGAffineTransform(translationX: 0, y: -300)
+        closeButton.transform = moveTopTransform
         
         
     }
@@ -51,23 +57,19 @@ class ReviewViewController: UIViewController {
             UIView.animate(withDuration: 1, delay: delay, options: [], animations
                 : {
                 rateButton.alpha = 1.0
-                    rateButton.transform = .identity
+                rateButton.transform = .identity
                 delay += 0.05;
             }, completion: nil)
-            print(delay)
+
+            // spring animation
+//            UIView.animate(withDuration: 1, delay: delay, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {
+//                rateButton.alpha = 1.0
+//                rateButton.transform = .identity
+//                delay += 0.05;
+//            })
         }
-
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+            self.closeButton.transform = .identity
+        }, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
