@@ -54,8 +54,14 @@ class ReviewViewController: UIViewController {
         // fade-in animation
         var delay = 0.1
         for rateButton in rateButtons {
-            UIView.animate(withDuration: 1, delay: delay, options: [], animations
-                : {
+//            UIView.animate(withDuration: 1, delay: delay, options: [.repeat, .autoreverse], animations
+//                : {
+//                rateButton.alpha = 1.0
+//                rateButton.transform = .identity
+//                delay += 0.05;
+//            }, completion: nil)
+//            print(delay)
+            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {
                 rateButton.alpha = 1.0
                 rateButton.transform = .identity
                 delay += 0.05;
