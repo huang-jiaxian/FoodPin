@@ -73,7 +73,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: RestaurantDetailHeader!
-    @IBAction func close(segue: UIStoryboardSegue) {
+    @IBAction func closeRate(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
@@ -135,6 +135,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("datail page will disappear")
+        
         super .viewWillAppear(animated)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -162,10 +164,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        print("Detail page will disappear")
+        print("Detail page will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-//        print("Detail page did disappear")
+        print("Detail page did disappear")
     }
 }
