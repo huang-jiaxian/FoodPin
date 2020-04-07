@@ -109,8 +109,8 @@ class RestaurantTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRestaurantDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow{
-                let destinationController = segue.destination as! RestaurantDetailViewController
+            if let indexPath = tableView.indexPathForSelectedRow, let destinationController = segue.destination as? RestaurantDetailViewController {
+               
 //                destinationController.restaurantImageName = restaurants[indexPath.row].name
 //                destinationController.restaurantName = restaurants[indexPath.row].name
 //                destinationController.restaurantType = restaurants[indexPath.row].type

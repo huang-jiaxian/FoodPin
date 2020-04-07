@@ -81,6 +81,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 //    var restaurantName = ""
 //    var restaurantType = ""
 //    var restaurantLocation = ""
+    
+//  定义属性和指定类型，传过来的那个restaurant，是具体的对象
     var restaurant = Restaurant()
     
 
@@ -137,9 +139,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             
             destinationController.restaurant = restaurant
             
-        }else if segue.identifier == "showReview" {
-            let destinationController = segue.destination as! ReviewViewController
-            
+        }else if segue.identifier == "showReview",  let destinationController = segue.destination as? ReviewViewController{
+        
             destinationController.restaurant = restaurant
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 class ReviewViewController: UIViewController {
     
     @IBOutlet var backgroundImageView: UIImageView!
-    @IBOutlet var rateButtons: [UIButton]!
+//    @IBOutlet var rateButtons: [UIButton]!
     
     var restaurant = Restaurant()
 
@@ -22,18 +22,18 @@ class ReviewViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // applying the blur effect
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        backgroundImageView.addSubview(blurEffectView)
-        
-        let moveRightTransform = CGAffineTransform.init(translationX: 600, y: 0)
-        
-        // make the buttons invisible and move to right
-        for rateButton in rateButtons {
-            rateButton.alpha = 0
-            rateButton.transform = moveRightTransform
-        }
+//        let blurEffect = UIBlurEffect(style: .light)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = view.bounds
+//        backgroundImageView.addSubview(blurEffectView)
+//
+//        let moveRightTransform = CGAffineTransform.init(translationX: 600, y: 0)
+//
+//        // make the buttons invisible and move to right
+//        for rateButton in rateButtons {
+//            rateButton.alpha = 0
+//            rateButton.transform = moveRightTransform
+//        }
         
         
     }
@@ -47,7 +47,7 @@ class ReviewViewController: UIViewController {
 //        })
         // fade-in animation
 //        var delay = 0.1
-        for rateButton in rateButtons {
+//        for rateButton in rateButtons {
 //            UIView.animate(withDuration: 1, delay: delay, options: [.repeat, .autoreverse], animations
 //                : {
 //                rateButton.alpha = 1.0
@@ -55,11 +55,11 @@ class ReviewViewController: UIViewController {
 //                delay += 0.05;
 //            }, completion: nil)
 //            print(delay)
-            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {
-                rateButton.alpha = 1.0
-                rateButton.transform = .identity
-            })
-        }
+//            UIView.animate(withDuration: 1, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: [], animations: {
+//                rateButton.alpha = 1.0
+//                rateButton.transform = .identity
+//            })
+//        }
 
     }
 
