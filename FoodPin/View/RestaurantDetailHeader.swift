@@ -37,6 +37,7 @@ class RestaurantDetailHeader: UIView {
             heartImageView.tintColor = .white
         }
     }
+    @IBOutlet var ratingImageView: UIImageView!
 
     var restaurant = Restaurant()
     

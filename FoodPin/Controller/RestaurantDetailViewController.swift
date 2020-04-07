@@ -73,8 +73,25 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: RestaurantDetailHeader!
-    @IBAction func close(segue: UIStoryboardSegue) {
+    @IBAction func closeRate(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: {
+            if let rating = segue.identifier {
+                self.restaurant.rating = rating
+                self.headerView.ratingImageView.image = UIImage(named: rating)
+                
+                let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
+                self.headerView.ratingImageView.transform = scaleTransform
+                self.headerView.ratingImageView.alpha = 0
+                
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.7, options: [],  animations: {
+                    self.headerView.ratingImageView.transform = .identity
+                    self.headerView.ratingImageView.alpha = 1
+                }, completion: nil)
+            }
+        })
     }
     
 //    var restaurantImageName = ""
@@ -120,6 +137,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("datail page will disappear")
+        
         super .viewWillAppear(animated)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -146,10 +165,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        print("Detail page will disappear")
+        print("Detail page will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-//        print("Detail page did disappear")
+        print("Detail page did disappear")
     }
 }
